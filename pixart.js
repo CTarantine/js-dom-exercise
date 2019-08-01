@@ -17,7 +17,7 @@ setColor.addEventListener("click", (event) => {
 
 const body = document.querySelector("body")
 
-for (let i = 0; i < 20; i++) {
+for (let i = 0; i < 800; i++) {
     const newDiv = document.createElement('div');
     newDiv.className = 'square';
     body.appendChild(newDiv);
