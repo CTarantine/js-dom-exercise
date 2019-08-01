@@ -8,15 +8,23 @@ const setColor = document.querySelector("#set-color")
 const colorField = document.querySelector("#color-field")
 
 
-setColor.addEventListener("click",(event) => {
+setColor.addEventListener("click", (event) => {
     event.preventDefault();
-//check if button works
-//console.log("hello")
-brush.style.backgroundColor = colorField.value;
+    //check if button works
+    //console.log("hello")
+    brush.style.backgroundColor = colorField.value;
 })
 
-for (let i = 0;i<20; i++){
-    let newDiv = document.createElement('div')
-    newDiv.className = 'square'
-    document.querySelectorAll('body')[0].appendChild(newDiv)
+const body = document.querySelector("body")
+
+for (let i = 0; i < 20; i++) {
+    const newDiv = document.createElement('div');
+    newDiv.className = 'square';
+    body.appendChild(newDiv);
+
+    function changeSquare() {
+        newDiv.style.backgroundColor = colorField.value;
     }
+    newDiv.addEventListener("mouseover", changeSquare);
+
+}
