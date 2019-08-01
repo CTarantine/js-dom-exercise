@@ -14,3 +14,9 @@ setColor.addEventListener("click",(event) => {
 //console.log("hello")
 brush.style.backgroundColor = colorField.value;
 })
+
+for (let i = 0;i<20; i++){
+    let newDiv = document.createElement('div')
+    newDiv.className = 'square'
+    document.querySelectorAll('body')[0].appendChild(newDiv)
+    }
